@@ -1,0 +1,23 @@
+!!! Strict
+%html{:lang => "en-us", "xml:lang" => "en-us", :xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %title Oauth 2.0 Consumer
+  %body
+    %ul
+      - if session[:access_token]
+        %li
+          %a{ :href => "/signout"} Sign Out
+      - else
+        %li
+          %a{ :href => "/signin"} Sign In with Assay Depot
+        %li
+          %a{ :href => "/client_credentials"} Sign In with Client Credentials
+      %li
+        %a{ :href => "/token"} Current Token
+      %li
+        %a{ :href => "/user"} User Info
+      %li
+        %a{ :href => "/wares"} Wares
+      %li
+        %a{ :href => "/providers"} Providers
+
