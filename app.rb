@@ -10,6 +10,7 @@ enable :sessions
 
 # OAUTH2
 def client
+  # OAuth2::Client.new(@@client_id, @@client_secret, :site => "https://www.assaydepot.com")
   OAuth2::Client.new(@@client_id, @@client_secret, :site => "http://localhost:3000")
 end
 
